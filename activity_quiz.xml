@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".QuizActivity"
+        android:padding="16dp">
+
+    <ImageView
+            android:src="@drawable/heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/heart1"/>
+
+    <ImageView
+            android:src="@drawable/heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/heart1"
+            android:id="@+id/heart2"
+            android:layout_marginLeft="2dp"/>
+
+    <ImageView
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/heart2"
+            android:id="@+id/heart3"/>
+
+    <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="20"
+            android:textSize="32sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:padding="3dp"/>
+
+    <TextView
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/heart1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="26sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:id="@+id/questionTextView"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/questionTextView">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+            <Button
+                    android:onClick="checkScore"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/option1"/>
+
+            <Button
+                    android:onClick="checkScore"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/option2"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <Button
+                    android:onClick="checkScore"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/option3"/>
+
+            <Button
+                    android:onClick="checkScore"
+                    android:id="@+id/option4"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
